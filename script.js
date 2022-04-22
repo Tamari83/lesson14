@@ -67,16 +67,19 @@ console.log(array5);
 // 7
 let myArray9 = [12, 'google', 32, null, 'yahoo', 25];
 
-let result9= myArray9.filter(item => typeof item === 'number');
-let multiply=result9.map(function(x){
-    return x*2;
-})
-let resultString=myArray9.filter(item => typeof item === 'string');
-let resultUpString=resultString.map(function(x){
-  return x.toUpperCase();
-})
-let lastResult=multiply.concat(resultUpString);
-console.log(lastResult);
+
+let result9=myArray9.map(function(item){
+    if( typeof item === 'number'){
+        return item *2;
+    }else if(typeof item === 'string'){
+        return item.toUpperCase();
+    }else{
+        myArray9.push();
+    }
+}
+)
+console.log(result9);
+
 
 
 
