@@ -65,4 +65,22 @@ let array5= ['academy', 'of', 'digital', 'industries'].reduce(function(accumulat
 
 console.log(array5); 
 // 7
-let item = [12, 'google', 32, null, 'yahoo', 25];
+let myArray9 = [12, 'google', 32, null, 'yahoo', 25];
+
+let result9= myArray9.filter(item => typeof item === 'number');
+let multiply=result9.map(function(x){
+    return x*2;
+})
+let resultString=myArray9.filter(item => typeof item === 'string');
+let resultUpString=resultString.map(function(x){
+  return x.toUpperCase();
+})
+let lastResult=multiply.concat(resultUpString);
+console.log(lastResult);
+
+
+
+// 8
+
+// let words = ['Madrid', 'Rome', 'Milan', 'Berlin'];
+
