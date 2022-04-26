@@ -41,9 +41,7 @@ console.log(result5);
 
 // 3
 let array3 = [12, 25, 3, 6, 8, 14, 7, 23];
-let result6=array3.map(function (x) {
-    return x /3;
-})
+let result6=array3.map(x => x /3);
 console.log(result6);
 
 // 4
@@ -55,26 +53,21 @@ console.log(result7);
 let languages = ['html', 'css', 'javascript', 'python', 'php'];
 let result8=languages.filter(x => x.length >3);
 console.log(result8);
-// 6
-let array5= ['academy', 'of', 'digital', 'industries'].reduce(function(accumulator,currentValue){
-    return accumulator.concat(currentValue);
-},
-''
-)
-
-
-console.log(array5); 
-// 7
+// // 6
+let array5= ['academy', 'of', 'digital', 'industries'].join(' ');
+console.log(array5);
+ 
+// // 7
 let myArray9 = [12, 'google', 32, null, 'yahoo', 25];
 
 
 let result9=myArray9.map(function(item){
-    if( typeof item === 'number'){
+    if( typeof item == 'number'){
         return item *2;
-    }else if(typeof item === 'string'){
+    }else if(typeof item == 'string'){
         return item.toUpperCase();
     }else{
-        myArray9.push();
+        item;
     }
 }
 )
@@ -83,7 +76,7 @@ console.log(result9);
 
 
 
-// 8
+// // 8
 
 let words = ['Madrid', 'Rome', 'Milan', 'Berlin'];
 let result10=words.filter(x => x.includes('m') || x.includes('M'));
